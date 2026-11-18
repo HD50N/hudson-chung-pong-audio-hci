@@ -1,0 +1,14 @@
+python-osc
+numpy
+playsound==1.2.2
+
+# let's install Pyaudio now (note that we use this fallback "PyAudioWPatch" in case you are on Python 3.14 and on Windows)
+PyAudio; sys_platform == "win32" and python_version < "3.14"
+PyAudioWPatch; sys_platform == "win32" and python_version >= "3.14"
+
+# let's install the google one
+SpeechRecognition
+
+# only needed for MacOS
+PyAudio; sys_platform == "darwin"
+pyobjc; sys_platform == "darwin"
